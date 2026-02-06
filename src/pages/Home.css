@@ -1,0 +1,269 @@
+.home {
+  color: #fff;
+  background-color: #000;
+  /* use header height if available, fallback to 80px */
+  padding-top: var(--header-height, 80px);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  background: linear-gradient(135deg, #000 0%, #111 100%), url('/centre.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  min-height: 80vh;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons button {
+  margin: 0 1rem;
+  padding: 1rem 2rem;
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-buttons button:hover {
+  background-color: #E6C200;
+  transform: translateY(-2px);
+}
+
+.hero-image {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  z-index: 2;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.hero-image.left {
+  margin-right: 2rem;
+}
+
+.hero-image.right {
+  margin-left: 2rem;
+}
+
+.who-we-are, .services, .why, .featured-work, .clients, .contact-cta {
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.who-we-are h2, .services h2, .why h2, .featured-work h2, .clients h2, .contact-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #FFD700;
+}
+
+.services ul, .why ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.services li, .why li {
+  margin: 0;
+  padding: 1rem;
+  background-color: #111;
+  border-radius: 8px;
+  border-left: 4px solid #FFD700;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  justify-self: center;
+}
+
+.why ul {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 200px;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: rgba(0,0,0,0.7);
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.contact-cta {
+  background-color: #111;
+}
+
+.contact-cta h2 {
+  margin-bottom: 2rem;
+}
+
+.contact-cta button {
+  padding: 1rem 2rem;
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.contact-cta button:hover {
+  background-color: #E6C200;
+}
+
+.cta-link {
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .hero-image {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cta-buttons button {
+    width: 100%;
+  }
+
+  .who-we-are, .services, .why, .featured-work, .clients, .contact-cta {
+    padding: 2rem 1rem;
+  }
+
+  .why ul {
+    gap: 1rem;
+  }
+
+  .thumbnails {
+    gap: 1rem;
+  }
+
+  .thumbnail {
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .hero-image {
+    width: 150px;
+    margin: 1rem 0;
+  }
+
+  .hero-image.left, .hero-image.right {
+    margin: 1rem 0;
+  }
+
+  .thumbnails {
+    grid-template-columns: 1fr;
+  }
+
+  .why ul {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Vanivision.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VaniVision</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // If the SPA hasn't mounted within 1.5s, show a visible fallback inside the root (do not replace body)
+      setTimeout(() => {
+        const root = document.getElementById('root');
+        if (root && root.innerHTML.trim() === '') {
+          document.body.style.background = '#fff';
+          const fallback = document.createElement('div');
+          fallback.id = 'app-fallback';
+          fallback.style.padding = '2rem';
+          fallback.style.fontFamily = 'Montserrat, sans-serif';
+          fallback.style.color = '#000';
+          fallback.innerHTML = '<h2>App failed to load</h2><p>Open the browser developer console and paste any errors here so I can fix them.</p>';
+          root.appendChild(fallback);
+        }
+      }, 1500);
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
