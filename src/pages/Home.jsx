@@ -56,7 +56,7 @@ const Home = () => {
         <h2>Featured Work</h2>
         <div className="thumbnails">
           <div className="thumbnail">
-            <img src="/rough changed struc rite_01_05_17_13.png" alt="Luxury Residential Walkthrough" />
+            <img src="/luxury_residential.png" alt="Luxury Residential Walkthrough" />
             <p>Luxury Residential Walkthrough</p>
           </div>
           <div className="thumbnail">
@@ -72,7 +72,7 @@ const Home = () => {
             <p>Educational Explainer Video</p>
           </div>
           <div className="thumbnail">
-            <img src="/2 (1).png" alt="Product Demonstration Animation" />
+            <img src="/product.png" alt="Product Demonstration Animation" />
             <p>Product Demonstration Animation</p>
           </div>
           <div className="thumbnail">
@@ -86,6 +86,24 @@ const Home = () => {
       <section className="clients">
         <h2>Clients & Industries</h2>
         <p>Architecture | Real Estate | Events | Manufacturing | Education | Marketing Agencies | Startups</p>
+
+        <div className="client-logos">
+          <div className="logo-item">
+            <img src="/adani.png" alt="Adani" />
+          </div>
+          <div className="logo-item">
+            <img src="/Bharat tent.jpeg" alt="Bharat Tent" />
+          </div>
+          <div className="logo-item">
+            <img src="/Coat_of_arms_of_Chhattisgarh.svg.png" alt="Chhattisgarh Govt" />
+          </div>
+          <div className="logo-item">
+            <img src="/MG-logo.png" alt="MG" />
+          </div>
+          <div className="logo-item">
+            <img src="/struc rite.png" alt="Struc RITE" />
+          </div>
+        </div>
       </section>
 
     </div>
